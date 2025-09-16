@@ -48,20 +48,19 @@ export const Sidebar = ({ onClose, collapsed = false, onToggleCollapse }: Sideba
     <aside
       className={`${
         collapsed ? "w-20" : "w-64"
-      } transition-all duration-300 bg-surface border-r border-border flex flex-col fixed left-0 top-0 h-full z-40`}
+      } transition-all duration-300 bg-surface border-r border-border flex flex-col h-full`}
     >
       {/* Header */}
       <div className="p-4 border-b border-border flex items-center justify-between">
-        {!collapsed && (
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <Sprout className="w-6 h-6 text-white" />
-            </div>
-            <span className="font-bold text-xl bg-gradient-hero bg-clip-text text-transparent">
-              FarmWise
-            </span>
+        {/* Show brand when not collapsed or on mobile */}
+        <div className={`flex items-center space-x-2 ${collapsed ? 'lg:hidden' : ''}`}>
+          <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
+            <Sprout className="w-6 h-6 text-white" />
           </div>
-        )}
+          <span className="font-bold text-xl bg-gradient-hero bg-clip-text text-transparent">
+            FarmWise
+          </span>
+        </div>
         
         {/* Desktop collapse toggle */}
         <Button
@@ -74,16 +73,14 @@ export const Sidebar = ({ onClose, collapsed = false, onToggleCollapse }: Sideba
         </Button>
         
         {/* Mobile close button */}
-        {!collapsed && (
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={onClose}
-            className="lg:hidden w-8 h-8"
-          >
-            <ChevronLeft className="h-5 w-5" />
-          </Button>
-        )}
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={onClose}
+          className="lg:hidden w-8 h-8"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </Button>
       </div>
 
       {/* Navigation */}
@@ -96,12 +93,7 @@ export const Sidebar = ({ onClose, collapsed = false, onToggleCollapse }: Sideba
             <NavLink
               key={item.name}
               to={item.href}
-              onClick={() => {
-                // Always close sidebar on mobile when clicking a navigation item
-                if (window.innerWidth < 1024) {
-                  onClose?.();
-                }
-              }}
+              onClick={onClose}
               className={`flex items-center space-x-3 px-3 py-3 rounded-lg transition-all duration-200 group ${
                 isActive
                   ? "bg-primary text-primary-foreground shadow-primary"
@@ -113,7 +105,7 @@ export const Sidebar = ({ onClose, collapsed = false, onToggleCollapse }: Sideba
                 isActive ? "text-primary-foreground" : ""
               }`} />
               {!collapsed && (
-                <span className="font-medium truncate">{item.name}</span>
+                <span className="font-medium truncate lg:block">{item.name}</span>
               )}
               {!collapsed && isActive && (
                 <div className="ml-auto w-2 h-2 bg-accent rounded-full glow-accent" />
