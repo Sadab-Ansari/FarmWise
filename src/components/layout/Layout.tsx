@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import { Sidebar } from "./Sidebar";
+import { TopNavbar } from "./TopNavbar";
 
 export const Layout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
-  // Close sidebar on mobile when route changes
+  // Close sidebar on mobile when route changes and handle resize
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
@@ -16,6 +18,11 @@ export const Layout = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // Close sidebar when clicking on a route (mobile)
+  const handleSidebarClose = () => {
+    setSidebarOpen(false);
+  };
 
   return (
     <div className="flex min-h-screen bg-background">
@@ -28,27 +35,22 @@ export const Layout = () => {
       )}
       
       {/* Sidebar */}
-      <div className={`fixed lg:static inset-y-0 left-0 z-40 transition-transform duration-300 lg:translate-x-0 ${
-        sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+      <div className={`fixed lg:static inset-y-0 left-0 z-40 transition-all duration-300 ${
+        sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
       }`}>
-        <Sidebar onClose={() => setSidebarOpen(false)} />
+        <Sidebar 
+          onClose={handleSidebarClose}
+          collapsed={sidebarCollapsed}
+          onToggleCollapse={() => setSidebarCollapsed(!sidebarCollapsed)}
+        />
       </div>
       
       {/* Main content */}
-      <main className="flex-1 lg:ml-64 transition-all duration-300">
-        {/* Mobile header */}
-        <div className="lg:hidden bg-surface border-b border-border p-4">
-          <button
-            onClick={() => setSidebarOpen(true)}
-            className="p-2 rounded-lg hover:bg-surface-elevated"
-          >
-            <div className="w-6 h-6 flex flex-col justify-center space-y-1">
-              <div className="h-0.5 bg-foreground rounded"></div>
-              <div className="h-0.5 bg-foreground rounded"></div>
-              <div className="h-0.5 bg-foreground rounded"></div>
-            </div>
-          </button>
-        </div>
+      <main className={`flex-1 transition-all duration-300 ${
+        sidebarCollapsed ? 'lg:ml-20' : 'lg:ml-64'
+      }`}>
+        {/* Top Navbar */}
+        <TopNavbar onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
         
         <div className="p-6">
           <Outlet />

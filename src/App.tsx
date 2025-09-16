@@ -15,6 +15,9 @@ import Calendar from "./pages/Calendar";
 import FertilizerPlanner from "./pages/FertilizerPlanner";
 import DiseaseDetection from "./pages/DiseaseDetection";
 import Schemes from "./pages/Schemes";
+import SoilRestoration from "./pages/SoilRestoration";
+import HybridCrops from "./pages/HybridCrops";
+import FarmerCommunity from "./pages/FarmerCommunity";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -36,6 +39,9 @@ const App = () => (
               <Route path="/fertilizer" element={<FertilizerPlanner />} />
               <Route path="/disease" element={<DiseaseDetection />} />
               <Route path="/schemes" element={<Schemes />} />
+              <Route path="/soil-restoration" element={<SoilRestoration />} />
+              <Route path="/hybrid-crops" element={<HybridCrops />} />
+              <Route path="/community" element={<FarmerCommunity />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/assistant" element={<AIAssistant />} />
             </Route>
