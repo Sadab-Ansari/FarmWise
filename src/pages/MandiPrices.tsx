@@ -32,8 +32,8 @@ const priceStats = [
   },
   {
     title: "Top Performing",
-    value: "Wheat",
-    subtitle: "+₹250 this week",
+    value: "Rice",
+    subtitle: "+₹180 this week",
     icon: TrendingUp,
     trend: { value: 15, isPositive: true },
   },
@@ -55,72 +55,72 @@ const priceStats = [
 
 const mandiPrices = [
   {
-    crop: "Wheat",
-    variety: "Durum",
-    market: "Mumbai APMC",
-    minPrice: 2080,
-    maxPrice: 2180,
-    modalPrice: 2130,
+    crop: "Rice",
+    variety: "PR-116",
+    market: "Ranchi APMC",
+    minPrice: 1980,
+    maxPrice: 2080,
+    modalPrice: 2030,
     trend: "up",
     change: 5.2,
     volume: "450 MT",
     quality: "FAQ",
   },
   {
-    crop: "Rice",
-    variety: "Basmati",
-    market: "Pune APMC",
-    minPrice: 3200,
-    maxPrice: 3450,
-    modalPrice: 3325,
+    crop: "Wheat",
+    variety: "HD-2967",
+    market: "Dhanbad APMC",
+    minPrice: 2100,
+    maxPrice: 2250,
+    modalPrice: 2175,
     trend: "up",
     change: 3.8,
     volume: "280 MT",
     quality: "Grade A",
   },
   {
-    crop: "Cotton",
-    variety: "Long Staple",
-    market: "Nagpur APMC",
-    minPrice: 5800,
-    maxPrice: 6200,
-    modalPrice: 6000,
+    crop: "Maize",
+    variety: "Hybrid",
+    market: "Jamshedpur APMC",
+    minPrice: 1800,
+    maxPrice: 1950,
+    modalPrice: 1875,
     trend: "down",
     change: -2.1,
     volume: "150 MT",
     quality: "Grade B",
   },
   {
-    crop: "Sugarcane",
-    variety: "Early Maturing",
-    market: "Kolhapur APMC",
-    minPrice: 275,
-    maxPrice: 290,
-    modalPrice: 282,
+    crop: "Paddy",
+    variety: "Swarna",
+    market: "Bokaro APMC",
+    minPrice: 1850,
+    maxPrice: 1950,
+    modalPrice: 1900,
     trend: "up",
     change: 1.8,
     volume: "1200 MT",
     quality: "FAQ",
   },
   {
-    crop: "Onion",
-    variety: "Red",
-    market: "Nashik APMC",
-    minPrice: 1200,
-    maxPrice: 1580,
-    modalPrice: 1390,
+    crop: "Potato",
+    variety: "Kufri Jyoti",
+    market: "Hazaribagh APMC",
+    minPrice: 800,
+    maxPrice: 1200,
+    modalPrice: 1000,
     trend: "down",
     change: -8.5,
     volume: "320 MT",
     quality: "Grade A",
   },
   {
-    crop: "Soybean",
-    variety: "Yellow",
-    market: "Latur APMC",
-    minPrice: 3800,
-    maxPrice: 4100,
-    modalPrice: 3950,
+    crop: "Mustard",
+    variety: "Pusa Bold",
+    market: "Deoghar APMC",
+    minPrice: 4200,
+    maxPrice: 4500,
+    modalPrice: 4350,
     trend: "up",
     change: 4.2,
     volume: "180 MT",
@@ -163,7 +163,7 @@ export default function MandiPrices() {
             Mandi Prices
           </h1>
           <p className="text-muted-foreground mt-2">
-            Real-time market prices from APMC mandis across Maharashtra.
+            Real-time market prices from APMC mandis across Jharkhand.
           </p>
         </div>
         <div className="flex gap-3">
@@ -205,7 +205,7 @@ export default function MandiPrices() {
             </div>
             <div className="flex gap-2">
               <Badge variant="outline" className="cursor-pointer hover:bg-primary/10">
-                Maharashtra
+                Jharkhand
               </Badge>
               <Badge variant="outline" className="cursor-pointer hover:bg-primary/10">
                 This Week

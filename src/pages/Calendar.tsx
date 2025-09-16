@@ -46,13 +46,13 @@ const calendarStats = [
 const tasks = [
   {
     id: 1,
-    title: "Wheat Harvest - Field A",
+    title: "Rice Harvest - Field A",
     date: "2024-03-15",
     time: "06:00 AM",
     type: "harvest",
     priority: "high",
     field: "Field A",
-    crop: "Wheat",
+    crop: "Rice",
   },
   {
     id: 2,
@@ -62,7 +62,7 @@ const tasks = [
     type: "irrigation",
     priority: "medium",
     field: "Field B, C",
-    crop: "Rice",
+    crop: "Wheat",
   },
   {
     id: 3,
@@ -72,7 +72,7 @@ const tasks = [
     type: "fertilizer",
     priority: "medium",
     field: "Field D",
-    crop: "Corn",
+    crop: "Maize",
   },
   {
     id: 4,
@@ -92,7 +92,7 @@ const tasks = [
     type: "testing",
     priority: "high",
     field: "Field E",
-    crop: "Sugarcane",
+    crop: "Mustard",
   },
 ];
 
@@ -114,7 +114,7 @@ const cropSchedule = [
     status: "Growing",
   },
   {
-    crop: "Corn",
+    crop: "Maize",
     field: "Field C",
     planted: "Feb 10, 2024",
     harvestDue: "May 10, 2024",

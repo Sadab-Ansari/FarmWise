@@ -92,7 +92,7 @@ export default function Weather() {
         </div>
         <Badge variant="outline" className="gap-2">
           <CloudSun className="h-4 w-4" />
-          Mumbai, Maharashtra
+          Ranchi, Jharkhand
         </Badge>
       </div>
 

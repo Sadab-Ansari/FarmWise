@@ -85,7 +85,7 @@ const NotificationBell = () => {
               </div>
               <div className="flex-1">
                 <p className="text-sm font-medium">Weather Alert</p>
-                <p className="text-xs text-muted-foreground mt-1">Heavy rain expected in your area tomorrow</p>
+                <p className="text-xs text-muted-foreground mt-1">Heavy rain expected in Ranchi region tomorrow</p>
                 <p className="text-xs text-muted-foreground mt-2">2 hours ago</p>
               </div>
             </div>

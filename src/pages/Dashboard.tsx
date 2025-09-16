@@ -51,7 +51,7 @@ const overviewStats = [
   },
   {
     title: "Expected Yield",
-    value: "4.2 tons",
+    value: "5.2 tons",
     subtitle: "This season",
     icon: TrendingUp,
     trend: { value: 15, isPositive: true },
@@ -68,10 +68,10 @@ const yieldData = [
 ];
 
 const cropDistribution = [
-  { name: "Wheat", value: 40, color: "#0D7377" },
-  { name: "Rice", value: 30, color: "#14FFEC" },
-  { name: "Corn", value: 20, color: "#329F5B" },
-  { name: "Barley", value: 10, color: "#F4A261" },
+  { name: "Rice", value: 45, color: "#0D7377" },
+  { name: "Wheat", value: 25, color: "#14FFEC" },
+  { name: "Maize", value: 20, color: "#329F5B" },
+  { name: "Mustard", value: 10, color: "#F4A261" },
 ];
 
 const recentActivities = [

@@ -48,7 +48,7 @@ const initialMessages: Message[] = [
   {
     id: 3,
     type: "bot",
-    message: "Based on your soil analysis (pH 6.8, good organic matter) and current market prices, I recommend wheat for 60% of your field and mustard for 40%. Here's why:\n\n• Wheat: High demand, good profit margin (45%), suited for your soil type\n• Mustard: Quick growing (90 days), excellent oil content demand\n• Both crops complement each other in crop rotation",
+    message: "Based on your soil analysis (pH 6.8, good organic matter) and current market prices in Jharkhand, I recommend rice for 60% of your field and mustard for 40%. Here's why:\n\n• Rice: High demand, good profit margin (48%), suited for your soil type and climate\n• Mustard: Quick growing (105 days), excellent oil content demand\n• Both crops complement each other in crop rotation",
     timestamp: "10:33 AM",
     attachments: [
       { type: "chart", title: "Profit Analysis" },

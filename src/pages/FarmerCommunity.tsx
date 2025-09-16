@@ -58,7 +58,7 @@ const forumPosts = [
     author: {
       name: "Ramesh Kumar",
       avatar: "/api/placeholder/40/40",
-      location: "Pune, Maharashtra",
+      location: "Ranchi, Jharkhand",
       reputation: 4.8,
       badge: "Expert Farmer",
       posts: 145,
@@ -79,7 +79,7 @@ const forumPosts = [
     author: {
       name: "Dr. Priya Sharma",
       avatar: "/api/placeholder/40/40",
-      location: "Agricultural University, Delhi",
+      location: "Birsa Agricultural University, Ranchi",
       reputation: 4.9,
       badge: "Agricultural Expert",
       posts: 89,
@@ -100,7 +100,7 @@ const forumPosts = [
     author: {
       name: "Manjeet Singh",
       avatar: "/api/placeholder/40/40",
-      location: "Ludhiana, Punjab",
+      location: "Dhanbad, Jharkhand",
       reputation: 4.6,
       badge: "Progressive Farmer",
       posts: 67,
@@ -121,7 +121,7 @@ const forumPosts = [
     author: {
       name: "Sunita Devi",
       avatar: "/api/placeholder/40/40",
-      location: "Jaipur, Rajasthan",
+      location: "Jamshedpur, Jharkhand",
       reputation: 4.7,
       badge: "Successful Farmer",
       posts: 134,
@@ -166,7 +166,7 @@ const expertReplies = [
     expert: {
       name: "Dr. Vikram Patel",
       title: "Soil Scientist",
-      institution: "ICAR Research Institute",
+      institution: "ICAR-RCER, Ranchi",
       reputation: 4.9,
     },
     reply: "For clay soil tomato cultivation, I recommend using well-decomposed cow manure (5-7 tons/hectare) mixed with neem cake (200 kg/hectare). This combination improves soil structure and provides slow-release nutrients.",
@@ -179,7 +179,7 @@ const expertReplies = [
     expert: {
       name: "Dr. Anita Rao",
       title: "Plant Pathologist",
-      institution: "Punjab Agricultural University",
+      institution: "Birsa Agricultural University",
       reputation: 4.8,
     },
     reply: "Based on your description, this appears to be yellow rust (Puccinia striiformis). Immediate action needed: 1) Apply Tebuconazole fungicide, 2) Ensure proper drainage, 3) Remove infected plant debris. Monitor weather conditions closely.",
@@ -218,7 +218,7 @@ const nearbyFarmers = [
   {
     name: "Kumar Sharma",
     location: "5.7 km away",
-    specialization: "Fruit Orchards",
+    specialization: "Rice Cultivation",
     rating: 4.6,
     posts: 67,
     avatar: "/api/placeholder/40/40",
@@ -272,7 +272,7 @@ export default function FarmerCommunity() {
         <div className="flex gap-3">
           <Badge variant="outline" className="gap-2">
             <MapPin className="h-4 w-4" />
-            Maharashtra Region
+            Jharkhand Region
           </Badge>
           <Button className="gradient-primary gap-2">
             <Plus className="h-4 w-4" />

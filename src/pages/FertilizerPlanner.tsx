@@ -69,10 +69,10 @@ const FertilizerPlanner = () => {
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="wheat">Wheat</SelectItem>
                 <SelectItem value="rice">Rice</SelectItem>
-                <SelectItem value="corn">Corn</SelectItem>
-                <SelectItem value="cotton">Cotton</SelectItem>
+                <SelectItem value="wheat">Wheat</SelectItem>
+                <SelectItem value="maize">Maize</SelectItem>
+                <SelectItem value="mustard">Mustard</SelectItem>
               </SelectContent>
             </Select>
           </CardContent>

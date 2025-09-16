@@ -61,25 +61,12 @@ const seasonalStats = [
 
 const cropRecommendations = [
   {
-    name: "Wheat",
-    suitability: 95,
-    expectedYield: "4.2 tons/hectare",
-    profitMargin: 45,
-    growingPeriod: "120 days",
-    marketPrice: "₹2,100/quintal",
-    soilRequirement: "Loamy, well-drained",
-    season: "Rabi",
-    waterNeed: "Medium",
-    icon: Wheat,
-    color: "#F4A261",
-  },
-  {
     name: "Rice",
-    suitability: 88,
+    suitability: 95,
     expectedYield: "5.8 tons/hectare",
-    profitMargin: 38,
-    growingPeriod: "110 days",
-    marketPrice: "₹1,900/quintal",
+    profitMargin: 48,
+    growingPeriod: "120 days",
+    marketPrice: "₹2,030/quintal",
     soilRequirement: "Clay, waterlogged",
     season: "Kharif",
     waterNeed: "High",
@@ -87,12 +74,25 @@ const cropRecommendations = [
     color: "#2A9D8F",
   },
   {
-    name: "Corn",
+    name: "Wheat",
+    suitability: 85,
+    expectedYield: "3.8 tons/hectare",
+    profitMargin: 42,
+    growingPeriod: "120 days",
+    marketPrice: "₹2,175/quintal",
+    soilRequirement: "Loamy, well-drained",
+    season: "Rabi",
+    waterNeed: "Medium",
+    icon: Wheat,
+    color: "#F4A261",
+  },
+  {
+    name: "Maize",
     suitability: 92,
-    expectedYield: "6.5 tons/hectare",
-    profitMargin: 52,
+    expectedYield: "4.5 tons/hectare",
+    profitMargin: 45,
     growingPeriod: "90 days",
-    marketPrice: "₹1,800/quintal",
+    marketPrice: "₹1,875/quintal",
     soilRequirement: "Well-drained loam",
     season: "Kharif",
     waterNeed: "Medium",
@@ -100,15 +100,15 @@ const cropRecommendations = [
     color: "#E9C46A",
   },
   {
-    name: "Sugarcane",
-    suitability: 78,
-    expectedYield: "70 tons/hectare",
-    profitMargin: 65,
-    growingPeriod: "365 days",
-    marketPrice: "₹280/quintal",
-    soilRequirement: "Rich, deep soil",
-    season: "Annual",
-    waterNeed: "High",
+    name: "Mustard",
+    suitability: 88,
+    expectedYield: "1.8 tons/hectare",
+    profitMargin: 55,
+    growingPeriod: "105 days",
+    marketPrice: "₹4,350/quintal",
+    soilRequirement: "Well-drained sandy loam",
+    season: "Rabi",
+    waterNeed: "Low",
     icon: Leaf,
     color: "#264653",
   },
@@ -128,12 +128,12 @@ const seasonalDistribution = [
 ];
 
 const marketTrends = [
-  { month: "Jan", wheat: 2100, rice: 1900, corn: 1800 },
-  { month: "Feb", wheat: 2150, rice: 1950, corn: 1850 },
-  { month: "Mar", wheat: 2200, rice: 2000, corn: 1900 },
-  { month: "Apr", wheat: 2250, rice: 2050, corn: 1950 },
-  { month: "May", wheat: 2300, rice: 2100, corn: 2000 },
-  { month: "Jun", wheat: 2350, rice: 2150, corn: 2050 },
+  { month: "Jan", rice: 2030, wheat: 2175, maize: 1875 },
+  { month: "Feb", rice: 2080, wheat: 2200, maize: 1900 },
+  { month: "Mar", rice: 2120, wheat: 2250, maize: 1925 },
+  { month: "Apr", rice: 2150, wheat: 2275, maize: 1950 },
+  { month: "May", rice: 2180, wheat: 2300, maize: 1975 },
+  { month: "Jun", rice: 2200, wheat: 2325, maize: 2000 },
 ];
 
 const getSuitabilityColor = (score: number) => {
@@ -165,7 +165,7 @@ export default function CropRecommendations() {
         </div>
         <Badge variant="outline" className="gap-2">
           <MapPin className="h-4 w-4" />
-          Maharashtra, India
+          Jharkhand, India
         </Badge>
       </div>
 
@@ -362,24 +362,24 @@ export default function CropRecommendations() {
               />
               <Line
                 type="monotone"
-                dataKey="wheat"
-                stroke="#F4A261"
-                strokeWidth={3}
-                name="Wheat (₹/quintal)"
-              />
-              <Line
-                type="monotone"
                 dataKey="rice"
                 stroke="#2A9D8F"
-                strokeWidth={2}
+                strokeWidth={3}
                 name="Rice (₹/quintal)"
               />
               <Line
                 type="monotone"
-                dataKey="corn"
+                dataKey="wheat"
+                stroke="#F4A261"
+                strokeWidth={2}
+                name="Wheat (₹/quintal)"
+              />
+              <Line
+                type="monotone"
+                dataKey="maize"
                 stroke="#E9C46A"
                 strokeWidth={2}
-                name="Corn (₹/quintal)"
+                name="Maize (₹/quintal)"
               />
             </LineChart>
           </ResponsiveContainer>

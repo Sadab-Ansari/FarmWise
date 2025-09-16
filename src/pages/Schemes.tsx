@@ -209,6 +209,7 @@ const Schemes = () => {
               <SelectContent>
                 <SelectItem value="all">All States</SelectItem>
                 <SelectItem value="national">National</SelectItem>
+                <SelectItem value="jharkhand">Jharkhand</SelectItem>
                 <SelectItem value="maharashtra">Maharashtra</SelectItem>
                 <SelectItem value="punjab">Punjab</SelectItem>
                 <SelectItem value="karnataka">Karnataka</SelectItem>
