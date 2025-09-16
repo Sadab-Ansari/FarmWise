@@ -17,6 +17,7 @@ import DiseaseDetection from "./pages/DiseaseDetection";
 import Schemes from "./pages/Schemes";
 import SoilRestoration from "./pages/SoilRestoration";
 import HybridCrops from "./pages/HybridCrops";
+import CarbonCredits from "./pages/CarbonCredits";
 import FarmerCommunity from "./pages/FarmerCommunity";
 import NotFound from "./pages/NotFound";
 
@@ -41,6 +42,7 @@ const App = () => (
               <Route path="/schemes" element={<Schemes />} />
               <Route path="/soil-restoration" element={<SoilRestoration />} />
               <Route path="/hybrid-crops" element={<HybridCrops />} />
+              <Route path="/carbon-credits" element={<CarbonCredits />} />
               <Route path="/community" element={<FarmerCommunity />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/assistant" element={<AIAssistant />} />
